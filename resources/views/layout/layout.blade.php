@@ -56,9 +56,8 @@
   @include('layout.header')
   {{-- End Header --}}
 
-  <main>
+  <main class="py-4">
     @yield('content')
-
   </main>
   {{-- Start Footer --}}
   @include('layout.footer')

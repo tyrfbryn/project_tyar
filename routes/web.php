@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\MyController as ControllersMyController;
 use App\Models\Siswa;
 use App\Models\Sekolah;
 use App\Models\AlbumMusik;
 use App\Models\Film;
+use App\Models\MyController;
+use App\Models\MovieController;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -65,3 +68,11 @@ route::get('film', function(){
 route::get('film/{id}', function(int $id){
     return view('detail-film', ['film' => Film::find($id)]);
 });
+
+//route with controller
+Route::get('perkenalan', [App\Http\Controllers\MyController::class,'introduce']);
+Route::get('hewan', [App\Http\Controllers\MyController::class,'animals']);
+
+//route with movie
+Route::get('movie', [App\Http\Controllers\MovieController::class,'getMovie']);
+Route::get('movie/{id}', [App\Http\Controllers\MovieController::class,'getMovieById']);
