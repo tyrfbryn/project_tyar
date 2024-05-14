@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\AlbumMusik;
+use App\Models\Artikel;
 use App\Models\Film;
 use App\Models\Sekolah;
 use App\Models\siswa;
@@ -23,7 +24,8 @@ class DatabaseSeeder extends Seeder
             AlbumMusikSeeder::class,
             FilmSeeder::class,
             DetailFilmSeeder::class,
-            MediaFilmSeeder::class
+            MediaFilmSeeder::class,
+            ArtikelSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
     }

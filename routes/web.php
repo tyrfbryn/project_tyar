@@ -7,6 +7,7 @@ use App\Models\AlbumMusik;
 use App\Models\Film;
 use App\Models\MyController;
 use App\Models\MovieController;
+use App\Http\Controllers\ArtikelController;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -76,3 +77,8 @@ Route::get('hewan', [App\Http\Controllers\MyController::class,'animals']);
 //route with movie
 Route::get('movie', [App\Http\Controllers\MovieController::class,'getMovie']);
 Route::get('movie/{id}', [App\Http\Controllers\MovieController::class,'getMovieById']);
+
+//route with artikel
+Route::get('artikel', [App\Http\Controllers\ArtikelController::class,'getArtikel']);
+Route::get('artikel/id/{Id}', [App\Http\Controllers\ArtikelController::class,'getArtikelById']);
+Route::get('artikel/kategori/{kategori}', [App\Http\Controllers\ArtikelController::class,'getArtikelKategori']);
